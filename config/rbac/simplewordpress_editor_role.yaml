@@ -1,0 +1,24 @@
+# permissions for end users to edit simplewordpresses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: simplewordpress-editor-role
+rules:
+- apiGroups:
+  - simple-wordpress.simplewordpress.com
+  resources:
+  - simplewordpresses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - simple-wordpress.simplewordpress.com
+  resources:
+  - simplewordpresses/status
+  verbs:
+  - get

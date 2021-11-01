@@ -1,0 +1,19 @@
+domain: simplewordpress.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: simple-wordpress-operator
+repo: github.com/mgeri/simple-wordpress-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: simplewordpress.com
+  group: simple-wordpress
+  kind: SimpleWordpress
+  path: github.com/mgeri/simple-wordpress-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

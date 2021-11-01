@@ -1,0 +1,6 @@
+apiVersion: simple-wordpress.simplewordpress.com/v1alpha1
+kind: SimpleWordpress
+metadata:
+  name: simplewordpress-sample
+spec:
+  sqlRootPassword: "mypassword"
